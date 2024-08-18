@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Chat Room in NODE</title>
+    <link href="./style.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-black text-white w-full h-screen relative">
+    <div class="content">
+      <div class="room text-center py-2">[New Tech]</div><!-- Current Room name displayed-->
+      <div class="room-list" id="room-list">
+        <h3 class="mx-4">Available Rooms</h3>
+        <ul class="list relative flex w-96 justify-around items-end m-2">
+          <a href="#" class="py-2 px-2 rounded hover:bg-gray-500 bg-gray-800"><li>Room 1</li></a>
+          <a href="#" class="py-2 px-2 rounded hover:bg-gray-500 bg-gray-800"><li>Room 2</li></a>
+          <a href="#" class="py-2 px-2 rounded hover:bg-gray-500 bg-gray-800"><li>Room 3</li></a>
+          <a href="#" class="py-2 px-2 rounded hover:bg-gray-500 bg-gray-800"><li>Room 4</li></a>
+        </ul>
+      </div><!-- All room names lists-->
+      <div id="messages" class="messages p-3 bg-gray-800 text-wrap">
+        Hello, Im Mike. How u doin?
+      <span id="chat-user" class="bg-black p-1 respective-user">Mike</span>
+      </div><!-- Div where messages displayed-->
+
+      <form id="send-form" class="relative items-center bottom-0 p-2 flex flex-col justify-center w-full">
+        <input type="text" name="msg" placeholder="Type your message..." class="w-full m-2 p-2 bg-slate-600 text-white" />
+        <input type="submit" name="send" class="hover:bg-slate-800 hover:text-slate-100 cursor-pointer border border-gray-100 rounded p-1" value="Submit Message">
+        
+          <div id='help'>Chat commands:
+          <ul>
+          <li>Change nickname: <code>/nick [username]</code></li>
+          <li>Join/create room: <code>/join [room name]</code></li>
+          </ul>
+          </div>
+        </form>
+    </div>
+    <script src='http://code.jquery.com/jquery-1.8.0.min.js' type='text/javascript'></script>
+    <script src='http://localhost:3000/src/js/chat.js' type='text/javascript'></script>
+    <script src='http://localhost:3000/src/js/chat_ui.js' type='text/javascript'></script>
+  </body>
+</html> 
